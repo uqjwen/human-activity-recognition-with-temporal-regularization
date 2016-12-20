@@ -3,13 +3,15 @@ Implementing the main idea of this paper http://ieeexplore.ieee.org/document/745
 
 For simple demonstration, we used the UCI human activity recognition dataset: https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. Put the dataset into the './data/' directory. 
 
-Compare the LSTM method here: https://github.com/guillaume-chevalier/LSTM-Human-Activity-Recognition, we are able to achieve higher accuracy with roughly defined super parameters and model structure, and we expect even higher accuracy with fine tunned parameters and datasets with good temporal information.
+Compare with the LSTM method here: https://github.com/guillaume-chevalier/LSTM-Human-Activity-Recognition, we are able to achieve higher accuracy with roughly defined super parameters and model structure, and we expect even higher accuracy with fine tunned parameters (temporal regularization weight and number of neighbouring examples to consider) and datasets with good temporal information (people perform each activity longer).
 
 Overfitting seems to appear after many epochs, one possible solution is to add l2 or l2 regularization.  
 
 
 Using TensorFlow backend.
+
  [*] Loaded parameters success!!!
+ 
  0/100 epoch, 113/114 batch. train_acc:1.0 val_acc:0.908288061619
 
  1/100 epoch, 113/114 batch. train_acc:1.0 val_acc:0.943274438381
